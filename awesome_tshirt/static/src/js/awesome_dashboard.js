@@ -7,9 +7,6 @@ odoo.define('awesome_tshirt.dashboard', function (require) {
  * the orders and buttons to jump to specific views.
  */
 
-var AbstractAction = require('web.AbstractAction');
-var core = require('web.core');
-
 var ChartWidget = require('awesome_tshirt.ChartWidget');
 
 var AbstractAction = require('web.AbstractAction');
