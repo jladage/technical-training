@@ -10,7 +10,7 @@
           <header>
             <field name="state" widget="statusbar" clickable="1"/>
           </header>
-          <widget name="is_late_message" />
+          <widget name="message-widget" />
           <sheet>
             <group>
               <group>
