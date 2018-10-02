@@ -9,12 +9,11 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
             // implement some custom logic here
             console.log('Yeah!!!!');
             if (this.value) {
-                var img = $('<img />',
+                this.$el.html($('<img />',
                  { id: 'image-preview',
                    src: this.value,
                    width: 300
-                 })
-                  .appendTo(this.$el);
+                 }));
             }
             else {
                 this.$el.html($('<p>IMAGE MISSING</p>'));
