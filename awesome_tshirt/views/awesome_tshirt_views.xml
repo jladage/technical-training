@@ -53,6 +53,9 @@
                 <div>Size: <field name="size"/></div>
                 <div>Quantity: <field name="quantity"/></div>
                 <div>Amount: <field name="amount"/></div>
+                <div><field class="pull-right" name="is_late"
+                            widget="late_boolean"
+                            options="{'red':'#FF0000','green':'#00FF00'}"/></div>
               </div>
             </t>
           </templates>
