@@ -6,6 +6,7 @@
             <script type="text/javascript" src="/awesome_tshirt/static/src/js/chart_widget.js"/>
             <script type="text/javascript" src="/awesome_tshirt/static/src/js/image_preview.js"/>
             <script type="text/javascript" src="/awesome_tshirt/static/src/js/message_widget.js"/>
+            <script type="text/javascript" src="/awesome_tshirt/static/src/js/print_label.js"/>
             <script type="text/javascript" src="/awesome_tshirt/static/src/js/late_widget.js"/>
             <script type="text/javascript" src="/awesome_tshirt/static/src/js/my_counter.js"/>
 

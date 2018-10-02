@@ -87,6 +87,17 @@
       </field>
     </record>
 
+  <record id="customer_form" model="ir.ui.view">
+    <field name="name">awesome_tshirt.customer_form</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//form" position="attributes">
+        <attributes name="js_class">customers_print</attributes>
+      </xpath>
+    </field>
+  </record>
+
     <!-- actions -->
     <record model="ir.actions.act_window" id="orders">
       <field name="name">Orders</field>
