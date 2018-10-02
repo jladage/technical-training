@@ -3,8 +3,8 @@ odoo.define('awesome_tshirt.ChartWidget', function (require) {
 
     var FieldChar = require('web.basic_fields').FieldChar;
 
-    var PreviewImage = Fieldchar.extend({
-        renderReadonly: function () {
+    var PreviewImage = FieldChar.extend({
+        _renderReadonly: function () {
             // implement some custom logic here
             console.log('Yeah!!!!   ')
             var self = this;
