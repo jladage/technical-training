@@ -4,6 +4,7 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
     var FieldChar = require('web.basic_fields').FieldChar;
     var FieldBoolean = require('web.basic_fields').FieldBoolean;
     var registry = require('web.field_registry');
+    var Widget = require('web.Widget');
 
     var PreviewImage = FieldChar.extend({
         _renderReadonly: function () {
@@ -16,10 +17,16 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
                    width: 300
                  }));
             } else {
-
-                this.$el.html($('<p>IMAGE MISSING</p>'));
-
+                this.$el.text(_("MISSING TSHIRT DESIGN"));
+                this.$el.addClass('alert-danger');
             }
+        },
+        /**
+         * Overrides to force this field to be always visible, as when it is unset,
+         * we want to display a warning.
+         */
+        isSet: function () {
+            return true;
         },
     });
 
