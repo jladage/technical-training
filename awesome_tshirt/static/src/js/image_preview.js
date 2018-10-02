@@ -7,6 +7,13 @@ odoo.define('awesome_tshirt.ChartWidget', function (require) {
         renderReadonly: function () {
             // implement some custom logic here
             console.log('Yeah!!!!   ')
+            var self = this;
+            var img = $('<img />',
+             { id: 'image-preview',
+               src: this.value,
+               width: 300
+             })
+              .appendTo(this.el);
         },
     });
 
