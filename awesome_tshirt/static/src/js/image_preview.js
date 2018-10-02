@@ -7,10 +7,7 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
     var PreviewImage = FieldChar.extend({
         _renderReadonly: function () {
             // implement some custom logic here
-            console.log('Yeah!!!!   ');
-            if (!this.isSet()) {
-                this.$el.html($('<p>IMAGE MISSING</p>'))
-            }
+            console.log('Yeah!!!!');
             if (this.value) {
                 var img = $('<img />',
                  { id: 'image-preview',
@@ -18,6 +15,10 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
                    width: 300
                  })
                   .appendTo(this.$el);
+            }
+            else {
+                this.$el.html($('<p>IMAGE MISSING</p>'));
+
             }
         },
     });
