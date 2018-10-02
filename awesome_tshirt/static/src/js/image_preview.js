@@ -8,8 +8,8 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
         _renderReadonly: function () {
             // implement some custom logic here
             console.log('Yeah!!!!   ');
-            if this.isSet() {
-                this.
+            if (!this.isSet()) {
+                this.$el.html($('<p>IMAGE MISSING</p>'))
             }
             if (this.value) {
                 var img = $('<img />',
