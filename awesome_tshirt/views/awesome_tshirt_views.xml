@@ -10,6 +10,7 @@
           <header>
             <field name="state" widget="statusbar" clickable="1"/>
           </header>
+          <widget name="is_late_message" />
           <sheet>
             <group>
               <group>
@@ -17,6 +18,7 @@
                 <field name="size"/>
                 <field name="quantity"/>
                 <field name="amount"/>
+                <field name="is_late" widget="late_boolean"/>
               </group>
               <group>
                 <field name="image_url" widget="image-preview-field"/>
@@ -55,7 +57,7 @@
                 <div>Amount: <field name="amount"/></div>
                 <div><field class="pull-right" name="is_late"
                             widget="late_boolean"
-                            options="{'red':'#FF0000','green':'#00FF00'}"/></div>
+                            options="{'not_late_color':'green'}"/></div>
               </div>
             </t>
           </templates>
@@ -71,6 +73,7 @@
           <field name="size"/>
           <field name="quantity"/>
           <field name="amount"/>
+          <field name="is_late" widget="late_boolean"/>
         </tree>
       </field>
     </record>

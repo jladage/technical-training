@@ -16,6 +16,7 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
                    width: 300
                  }));
             } else {
+
                 this.$el.html($('<p>IMAGE MISSING</p>'));
 
             }
@@ -36,6 +37,18 @@ odoo.define('awesome_tshirt.PreviewImage', function (require) {
 
                 }
             }
+        },
+    });
+
+    var IsLateMessage = Widget.extend({
+        init: function (parent, dataPoint) {
+            this.data = dataPoint.data;
+        },
+        start: function () {
+            this.$el.text(this.data.foo + "!");
+        },
+        updateState: function (dataPoint) {
+            this.$el.text(dataPoint.data.foo + "!");
         },
     });
 
