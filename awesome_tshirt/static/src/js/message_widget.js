@@ -10,11 +10,17 @@ odoo.define('awesome_tshirt.message_widget', function (require) {
             this.data = dataPoint.data;
         },
         start: function () {
-            this.$el.text(this.data.foo + "!");
+            this.$el.html($('<div>',{
+                'class':'alert alert-info',
+                'value':'My message',
+            }));
         },
         updateState: function (dataPoint) {
             this.$el.text(dataPoint.data.foo + "!");
         },
+        destroy: function (dataPoint) {
+            this.$el.empty();
+        }
     });
 
     registry.add('message-widget', MessageWidget);
